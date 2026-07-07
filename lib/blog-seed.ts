@@ -1,0 +1,32 @@
+export const seedBlogs = [
+  {
+    slug: "why-smart-classrooms-improve-learning-outcomes",
+    title: "Why Smart Classrooms Improve Learning Outcomes",
+    excerpt: "Interactive technology in the classroom isn't just a trend — it measurably improves student engagement and retention.",
+    content: `<p>Traditional chalk-and-talk methods often struggle to hold student attention, especially in subjects like mathematics and science. Smart classrooms address this by combining visual, interactive, and hands-on elements into every lesson.</p><p>At VedaEdutech, our smart classroom programs use interactive boards, curated video content, and real-time assessments to keep students engaged. Teachers can immediately identify which concepts need reinforcement, allowing for truly personalized instruction even in group settings.</p><p>Early results across our CSP centers show a marked improvement in test scores and classroom participation within the first academic term of adopting smart classroom tools.</p>`,
+    category: "Education Technology",
+    author: "VedaEdutech Team",
+    coverImage: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&q=80",
+    tags: ["Smart Classes", "EdTech", "Learning Outcomes"],
+  },
+  {
+    slug: "the-role-of-csp-centers-in-rural-education",
+    title: "The Role of CSP Centers in Rural Education",
+    excerpt: "Community Service Provider centers are closing India's rural-urban education gap, one town at a time.",
+    content: `<p>Access to quality education remains one of the biggest challenges for families in rural India. Long commutes, limited local infrastructure, and a shortage of trained teachers all contribute to lower learning outcomes outside major cities.</p><p>VedaEdutech's CSP (Community Service Provider) model tackles this directly by embedding fully-equipped learning centers within the communities themselves. Each center is staffed by locally trained educators and equipped with the same smart classroom technology used in our urban centers.</p><p>Today, our CSP network spans over 320 centers across Haryana, Uttar Pradesh, and Bihar — proof that quality education can reach anywhere with the right model.</p>`,
+    category: "Community Impact",
+    author: "VedaEdutech Team",
+    coverImage: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1200&q=80",
+    tags: ["CSP", "Rural Education", "Community"],
+  },
+  {
+    slug: "5-tips-to-prepare-for-competitive-exams",
+    title: "5 Tips to Prepare for Competitive Exams",
+    excerpt: "Practical, proven strategies our students use to succeed in scholarship and entrance exams.",
+    content: `<p>Competitive exams can feel overwhelming, but a structured approach makes all the difference. Here are five strategies our competitive exam prep instructors recommend:</p><ol><li><strong>Start with a diagnostic test</strong> to identify your strong and weak areas.</li><li><strong>Build a realistic study schedule</strong> that balances all subjects, not just your favorites.</li><li><strong>Practice under timed conditions</strong> regularly to build exam-day stamina.</li><li><strong>Review mistakes thoroughly</strong> — understanding why an answer was wrong is more valuable than just knowing the correct one.</li><li><strong>Take care of your health</strong>: sleep, nutrition, and short breaks meaningfully improve retention and focus.</li></ol><p>Our Competitive Exam Preparation course incorporates all of these strategies into a structured 6-month program with regular mock tests and mentorship.</p>`,
+    category: "Study Tips",
+    author: "VedaEdutech Team",
+    coverImage: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&q=80",
+    tags: ["Exam Prep", "Study Tips"],
+  },
+];
