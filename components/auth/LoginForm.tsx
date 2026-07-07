@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signIn } from "next-auth/react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Eye, EyeOff, Loader2, AlertCircle, Mail, Lock } from "lucide-react";
@@ -22,8 +22,7 @@ export default function LoginForm({ role }: { role: "admin" | "teacher" | "stude
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const config = roleConfig[role];
+    const config = roleConfig[role];
 
   const {
     register,
@@ -48,7 +47,7 @@ export default function LoginForm({ role }: { role: "admin" | "teacher" | "stude
         return;
       }
 
-      const callbackUrl = searchParams.get("callbackUrl") || `/dashboard/${role}`;
+      const callbackUrl = `/dashboard/${role}`;
       router.push(callbackUrl);
       router.refresh();
     } catch {

@@ -18,13 +18,20 @@ interface Blog {
   views: number;
 }
 
-const emptyForm = { title: "", excerpt: "", content: "", coverImage: "", category: "General", status: "draft" as const };
+const emptyForm = {
+  title: "",
+  excerpt: "",
+  content: "",
+  coverImage: "",
+  category: "General",
+  status: "draft" as "draft" | "published",
+};
 
 export default function BlogManager() {
   const queryClient = useQueryClient();
   const [modalOpen, setModalOpen] = useState(false);
   const [editing, setEditing] = useState<Blog | null>(null);
-  const [form, setForm] = useState<Omit<Blog, "_id" | "slug" | "views">>(emptyForm);
+const [form, setForm] = useState<Omit<Blog, "_id" | "slug" | "views">>(emptyForm);
   const [saving, setSaving] = useState(false);
 
   const { data, isLoading } = useQuery({
@@ -49,10 +56,19 @@ export default function BlogManager() {
   };
 
   const openEdit = (blog: Blog) => {
-    setEditing(blog);
-    setForm({ ...blog });
-    setModalOpen(true);
-  };
+  setEditing(blog);
+
+  setForm({
+    title: blog.title,
+    excerpt: blog.excerpt,
+    content: blog.content,
+    coverImage: blog.coverImage,
+    category: blog.category,
+    status: blog.status,
+  });
+
+  setModalOpen(true);
+};
 
   const handleSave = async () => {
     setSaving(true);
