@@ -24,7 +24,7 @@ export default function BlogManager() {
   const queryClient = useQueryClient();
   const [modalOpen, setModalOpen] = useState(false);
   const [editing, setEditing] = useState<Blog | null>(null);
-  const [form, setForm] = useState(emptyForm);
+  const [form, setForm] = useState<Omit<Blog, "_id" | "slug" | "views">>(emptyForm);
   const [saving, setSaving] = useState(false);
 
   const { data, isLoading } = useQuery({
